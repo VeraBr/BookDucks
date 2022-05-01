@@ -1,0 +1,248 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ededed;
+}
+
+body header .hide {
+  visibility: hidden;
+}
+
+body header h1 {
+  text-align: center;
+}
+
+body header h1:hover {
+  cursor: pointer;
+}
+
+body header .user-icon {
+  width: 165px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body header .user-icon p {
+  margin: 0px;
+}
+
+body .add-new-book-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .add-new-book-page .add-new-book, body .add-new-book-page .add-new-audio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 250px;
+  margin: 100px 50px 0px 50px;
+}
+
+body .add-new-book-page .add-new-book > *, body .add-new-book-page .add-new-audio > * {
+  margin: 5px;
+}
+
+body .login-register-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 100px;
+}
+
+body .login-register-page .login-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 150px;
+}
+
+body .login-register-page .login-field > * {
+  margin: 11px;
+}
+
+body .login-register-page .login-field input {
+  width: 250px;
+  height: 25px;
+}
+
+body .login-register-page .line {
+  background: black;
+  width: 1px;
+}
+
+body .login-register-page .register-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 150px;
+}
+
+body .login-register-page .register-field > * {
+  margin: 5px;
+}
+
+body .login-register-page .register-field input {
+  width: 250px;
+  height: 25px;
+}
+
+body .btn {
+  border: 0.1em solid black;
+  padding: 5px 15px 5px 15px;
+  background-color: white;
+  cursor: pointer;
+  width: 165px;
+}
+
+body .btn:hover {
+  background: #c4eaf7;
+}
+
+body .add-book-btn {
+  margin: 25px 0px 0px 15px;
+}
+
+body .user-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 60px;
+}
+
+body .user-profile .loggedin-user-info {
+  width: 30%;
+  margin-left: 15px;
+}
+
+body .user-profile .user-book-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  text-align: center;
+}
+
+body .user-profile .user-book-list .line {
+  background: black;
+  height: 1px;
+  margin: 40px 0px 40px 0px;
+}
+
+body .user-profile .user-book-list .user-books, body .user-profile .user-book-list .user-audio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+body .user-profile .user-book-list .user-books div, body .user-profile .user-book-list .user-audio div {
+  margin: 20px;
+  width: 150px;
+  border-style: ridge;
+}
+
+body main {
+  margin-top: 50px;
+}
+
+body main .landing-page.hidden {
+  display: none;
+}
+
+body main .landing-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+body main .landing-page .line {
+  background: black;
+  height: 1px;
+  width: 100%;
+  margin: 40px 0px 40px 0px;
+}
+
+body main .landing-page .books, body main .landing-page .audio-books {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main .landing-page .books div, body main .landing-page .audio-books div {
+  width: 300px;
+  margin: 0px 55px 10px 55px;
+  border-style: ridge;
+}
+
+body .hidden {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

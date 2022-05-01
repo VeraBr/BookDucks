@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>BookDucks</title>
+</head>
+<body>
+
+    <header>
+        <div class="user-icon" onclick="ProfilePage()">
+            <i class='fas fa-user-alt hide'></i>
+            <p class="login-user hidden"></p>
+        </div>
+        <h1 onclick="window.location.reload()">BookDucks</h1>
+        <button class="btn login-page-btn" onclick="loginPage()">Logga in / Registrera</button>
+        <button class="btn logout hidden" onclick="logOut()">Logga ut</button>
+
+    </header>
+
+    <button onclick="addBookPage()" class="btn add-book-btn hidden">Lägg till en bok</button>
+
+    <div class="user-profile hidden">
+        <aside class="loggedin-user-info"></aside>
+        <div class="user-book-list">
+            <h2><b>Mina böcker</b></h2>
+            <section class="user-books"></section>
+            <div class="line"></div>
+            <h2>Mina ljudböcker</h2>
+            <section class="user-audio"></section>
+        </div>
+    </div>
+    
+
+    <div class="add-new-book-page hidden">
+
+        <div class="add-new-book">
+            <h2>Lägg till bok</h2>
+            <input type="text" id="title" placeholder="Titel">
+            <input type="text" id="author" placeholder="Författare">
+            <input type="number" id="page-number" placeholder="Antal sidor">
+            <input type="number" id="grade" placeholder="Betyg 1-10">
+            <select name="genre" id="genre" multiple>
+                <option value="1">romantik</option>
+                <option value="2">deckare</option>
+                <option value="3">skönlitteratur</option>
+                <option value="4">fantasy</option>
+            </select>
+            <input type="file" id="book-image">
+
+            <button class="btn" onclick="addBook()">Spara</button>
+        </div>
+
+        <div class="add-new-audio">
+            <h2>Lägg till ljudbok</h2>
+            <input type="text" id="audio-title" placeholder="Titel">
+            <input type="date" id="date" placeholder="Utgivningsdatum">
+            <input type="number" id="length" placeholder="Längd i minuter">
+            <input type="number" id="audio-grade" placeholder="Betyg 1-10">
+            <select name="genre" id="audio-genre" multiple>
+                <option value="1">romantik</option>
+                <option value="2">deckare</option>
+                <option value="3">skönlitteratur</option>
+                <option value="4">fantasy</option>
+            </select>
+            <input type="file" id="audio-image">
+    
+            <button class="btn" onclick="addAudio()">Spara</button>
+        </div>
+        
+    </div>
+
+    <div class="login-register-page hidden">
+        <div class="login-field hidden">
+            <h2 class="login-text">Logga in</h2>
+            <input type="text" name="username" id="username" placeholder="Användarnamn">
+            <input type="password" name="password" id="password" placeholder="Lösenord">
+            <button class="btn" onclick="login()">Logga in</button>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="register-field hidden">
+            <h2 class="createUser-text">Registrera användare</h2>
+            <input type="text" name="register-username" id="register-user" placeholder="Användarnamn">
+            <input type="email" name="register-email" id="register-email" placeholder="Email">
+            <input type="password" name="register-password" id="register-password" placeholder="Lösenord">
+            <button class="btn" onclick="register()">Registrera användare</button>
+        </div>
+    </div>
+
+
+    <main>
+
+        <div class="landing-page">
+            <h2>Böcker</h2>
+            <section class="books"></section>
+            <div class="line"></div>
+            <h2>Ljudböcker</h2>
+            <seciton class="audio-books"></seciton>
+        </div>
+
+    </main>
+
+    
+    <script src="main.js"></script>
+</body>
+</html>
